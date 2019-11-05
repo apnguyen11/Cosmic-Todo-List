@@ -1,11 +1,20 @@
 {
-  "name": "cosmictodo",
+  "name": "todo-list-api",
   "version": "1.0.0",
-  "description": "todolist",
-  "main": "main.js",
+  "description": "",
+  "main": "server.js",
   "scripts": {
+    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Andy Nguyen",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "joi": "^14.3.1"
+  },
+  "devDependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^1.19.2"
+  }
 }
