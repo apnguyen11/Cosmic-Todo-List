@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 // app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(__dirname + '/public'));
-console.log(__dirname)
+console.log(__dirname, "the dirname **************")
 
 var todoList = [
     // {
@@ -106,8 +106,6 @@ app.delete("/api/todos/:id", function(req, res, next){
 })
 
 
-
-
-app.listen(port, function(){
+app.listen(process.env.PORT || 3000, function(){
     console.log(`Todo List API is now listening on port ${port}...`);
 })
