@@ -1,7 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 const url = require('url');
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 const Joi = require('joi');
 
 
@@ -106,6 +106,6 @@ app.delete("/api/todos/:id", function(req, res, next){
 })
 
 
-app.listen(process.env.PORT || 3000, function(){
+app.listen(port, function(){
     console.log(`Todo List API is now listening on port ${port}...`);
 })
