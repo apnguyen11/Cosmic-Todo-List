@@ -3,7 +3,6 @@
 ## Cosmic To-Do List ReadMe
 ___
 ### About
-![alt text](SMTM.gif)
 
 The purpose of this project was to create a simple to-do list app app that includes that allows users to add items too a list and remove items
 ___
@@ -16,6 +15,3 @@ ___
 
 ___ 
 
-###  License
-
-___ 
