@@ -11,7 +11,7 @@ ___
 ### Tools
 - [Express](https://www.expressjs.com/) - 
 - [Faker](https://www.npmjs.com/package/faker) -
-- [Node] (https://nodejs.org/en/) -
+- [Node](https://nodejs.org/en/) -
 
 ___ 
 
