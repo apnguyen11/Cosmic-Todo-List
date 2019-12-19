@@ -12,6 +12,9 @@ ___
 - [Express](https://www.expressjs.com/) - 
 - [Faker](https://www.npmjs.com/package/faker) -
 - [Node](https://nodejs.org/en/) -
-
 ___ 
+
+### Libraries Used
+- Bootstrap
+- Jquery
 
