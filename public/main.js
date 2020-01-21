@@ -1,17 +1,25 @@
 
+
 const btn = document.getElementById('btn');
 btn.addEventListener('click', function(){
     // var item = 1;
     console.log("clicked")
-    const todoString = document.getElementById('input-txt').value;
-    const promise = postData('/api/todos', {todo: todoString});
-    // const promiseDel = apiDelete('/api/todos/', item )
-    document.getElementById('input-txt'). value = "";
-    promise.then(function(res){
-       
-        renderTodos(res)
-       
-    })
+    if(  document.getElementById('input-txt').value == ""){
+        getData('/api/todos')
+        .then(function(res){
+            renderTodos(res)
+        })
+    } else {
+        const todoString = document.getElementById('input-txt').value;
+        const promise = postData('/api/todos', {todo: todoString});
+        // const promiseDel = apiDelete('/api/todos/', item )
+        document.getElementById('input-txt').value = "";
+        promise.then(function(res){
+            renderTodos(res)
+    
+        })
+
+    }
 
   globalControl()
 });
@@ -81,6 +89,17 @@ function renderTodos(todos) {
 function postData(url, data){
     return fetch(url, {
         method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+    .then(response => response.json())
+}
+
+function getData(url, data){
+    return fetch(url, {
+        method: 'GET',
         headers: {
             'Content-Type': 'application/json',
         },
