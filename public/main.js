@@ -2,7 +2,6 @@
 
 const btn = document.getElementById('btn');
 btn.addEventListener('click', function(){
-    // var item = 1;
     console.log("clicked")
     if(  document.getElementById('input-txt').value == ""){
         getData('/api/todos')
@@ -12,7 +11,6 @@ btn.addEventListener('click', function(){
     } else {
         const todoString = document.getElementById('input-txt').value;
         const promise = postData('/api/todos', {todo: todoString});
-        // const promiseDel = apiDelete('/api/todos/', item )
         document.getElementById('input-txt').value = "";
         promise.then(function(res){
             renderTodos(res)
@@ -30,10 +28,7 @@ var globalControl = function( UICtrl){
         $("#todos").click(function(event) {
             
             var target = event.target
-
             var isDelete = target.classList.contains('dbtn');
-
-
             var deleteID = event.target.id;
             var divID = event.target.parentNode.id;
             var el = event.target.parentNode
